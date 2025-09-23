@@ -82,6 +82,7 @@ export class SubjectAreaManager {
     // Add relevant work experience
     if (this.experienceData.workExperience) {
       const relevantExperience = this.experienceData.workExperience.filter(exp => {
+        // You can customize these filters based on your data structure
         const description = exp.description?.toLowerCase() || '';
         const skills = exp.skills?.join(' ').toLowerCase() || '';
         
@@ -108,7 +109,7 @@ export class SubjectAreaManager {
       });
     }
 
-    // Add relevant projects  
+    // Add relevant projects
     if (this.projectsData.projects) {
       const relevantProjects = this.projectsData.projects.filter(project => {
         const description = project.description?.toLowerCase() || '';
@@ -262,16 +263,12 @@ export class SubjectAreaManager {
 
   handleAreaHover(area, action) {
     // Track hover analytics
-    if (window.gtag) {
-      window.gtag('event', 'hover', {
-        section_name: area,
-        action: action,
-        event_category: 'engagement'
-      });
+    if (window.app && window.app.analytics) {
+      window.app.analytics.trackSubjectAreaEngagement(area, action);
     }
 
     // Add subtle animation on hover
-    const card = document.querySelector(`[data-subject="${area}"]`);
+    const card = document.querySelector(`[data-area="${area}"]`);
     if (action === 'hover_start') {
       gsap.to(card, {
         scale: 1.02,
@@ -341,7 +338,7 @@ export class SubjectAreaManager {
           <p class="company">${exp.company} • ${exp.duration}</p>
         </div>
         <p class="description">${exp.description}</p>
-        ${exp.achievements && exp.achievements.length > 0 ? `
+        ${exp.achievements ? `
           <div class="achievements">
             <h4>Key Achievements</h4>
             <ul>
@@ -349,7 +346,7 @@ export class SubjectAreaManager {
             </ul>
           </div>
         ` : ''}
-        ${exp.technologies && exp.technologies.length > 0 ? `
+        ${exp.technologies ? `
           <div class="technologies">
             ${exp.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
           </div>
@@ -369,7 +366,7 @@ export class SubjectAreaManager {
           </div>
         </div>
         <p class="description">${project.description}</p>
-        ${project.technologies && project.technologies.length > 0 ? `
+        ${project.technologies ? `
           <div class="technologies">
             ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
           </div>

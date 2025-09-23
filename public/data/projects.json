@@ -1,0 +1,140 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "BBC Microbit Python Projects",
+      "description": "Designed and implemented Python coding projects specifically for BBC Microbit controllers, teaching children fundamental programming concepts through hands-on hardware interaction.",
+      "category": "tech-education",
+      "tags": ["Python", "BBC Microbit", "STEM Education", "Hardware Programming", "Youth Education"],
+      "icon": "🔬",
+      "year": "2022-2024",
+      "company": "AtomicKids",
+      "status": "completed",
+      "technologies": ["Python", "BBC Microbit", "MicroPython"],
+      "images": [],
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Academic Data Analysis Tools",
+      "description": "Created usable backend tools and personal academic organizational web scraping tools using Python libraries for data analysis and visualization in academic research.",
+      "category": "tech-education",
+      "tags": ["Python", "Data Analysis", "Web Scraping", "Pandas", "Matplotlib", "Jupyter"],
+      "icon": "📊",
+      "year": "2020-2025",
+      "company": "Ming Chuan University",
+      "status": "ongoing",
+      "technologies": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Web Scraping"],
+      "images": [],
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "NEM Wallet Integration Testing",
+      "description": "Participated in bug testing for NEM desktop wallet and Ledger hardware wallet integration, ensuring secure and reliable cryptocurrency storage solutions.",
+      "category": "business-consulting",
+      "tags": ["Blockchain", "Quality Assurance", "Hardware Wallet", "NEM", "Security Testing"],
+      "icon": "💼",
+      "year": "2016-2019",
+      "company": "NEM Blockchain Foundation",
+      "status": "completed",
+      "technologies": ["NEM Blockchain", "Ledger Hardware Wallet", "Desktop Applications"],
+      "images": [],
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Cryptocurrency Investment Consultation Platform",
+      "description": "Developed comprehensive consultation services for cryptocurrency investment, including portfolio management, fund recovery, and market analysis for individual clients.",
+      "category": "business-consulting",
+      "tags": ["Cryptocurrency", "Investment Strategy", "Portfolio Management", "Market Analysis", "Client Relations"],
+      "icon": "₿",
+      "year": "2017-Present",
+      "company": "Freelance",
+      "status": "ongoing",
+      "technologies": ["Market Analysis Tools", "Portfolio Tracking", "Security Protocols"],
+      "images": [],
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Cryptocurrency Meetup Organization",
+      "description": "Organized and supported local cryptocurrency meetups, facilitating community building and knowledge sharing in the blockchain space.",
+      "category": "business-consulting",
+      "tags": ["Community Building", "Event Organization", "Networking", "Blockchain Education", "Public Speaking"],
+      "icon": "👥",
+      "year": "2017-Present",
+      "company": "Community",
+      "status": "ongoing",
+      "technologies": ["Event Management", "Community Platforms", "Presentation Tools"],
+      "images": [],
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Computex NEM Support",
+      "description": "Provided technical and organizational support to NEM Foundation's Vice President during Computex technology conference and related meetups.",
+      "category": "business-consulting",
+      "tags": ["Conference Support", "Technical Support", "Event Management", "NEM Blockchain", "Professional Networking"],
+      "icon": "🤝",
+      "year": "2016-2019",
+      "company": "NEM Blockchain Foundation",
+      "status": "completed",
+      "technologies": ["NEM Blockchain", "Conference Technology", "Support Tools"],
+      "images": [],
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": false
+    }
+  ],
+  "projectCategories": [
+    {
+      "id": "all",
+      "name": "All Projects",
+      "description": "Complete portfolio showcasing diverse professional achievements"
+    },
+    {
+      "id": "business-consulting",
+      "name": "Business Consulting",
+      "description": "Client consulting, project management, and professional services"
+    },
+    {
+      "id": "creative-media",
+      "name": "Creative Services",
+      "description": "Content creation, media production, and creative services"
+    },
+    {
+      "id": "tech-education",
+      "name": "Technical Projects",
+      "description": "STEM education background, coding projects, and technical development"
+    }
+  ]
+}

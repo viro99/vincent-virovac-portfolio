@@ -53,47 +53,28 @@
 
         <!-- Subject Areas Navigation -->
         <section class="subject-areas">
-            <div class="areas-container">
-                <div class="area-card fintech" data-area="fintech">
-                    <div class="area-content">
-                        <h3>Fintech</h3>
-                        <p>10+ year outlook on cryptocurrency and financial technology</p>
-                        <div class="area-icon">₿</div>
-                    </div>
-                </div>
-                
-                <div class="area-card media" data-area="media">
-                    <div class="area-content">
-                        <h3>Media</h3>
-                        <p>Content creation, interviewing, and creative services</p>
-                        <div class="area-icon">🎬</div>
-                    </div>
-                </div>
-                
-                <div class="area-card hobbies" data-area="hobbies">
-                    <div class="area-content">
-                        <h3>Hobbies</h3>
-                        <p>3D printing, IoT, hardware wallets, and AI experiments</p>
-                        <div class="area-icon">⚡</div>
-                    </div>
-                </div>
-            </div>
+            <!-- Cards will be dynamically created by JavaScript -->
         </section>
     </main>
 
-    <!-- Dynamic Content Display Area -->
-    <section class="content-display" id="content-display">
-        <div class="content-container">
-            <button class="close-content" aria-label="Close content">×</button>
-            <div class="content-header">
-                <h2 class="content-title"></h2>
-                <p class="content-description"></p>
+    <!-- Modal Content Display -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <button class="back-button" id="back-button">← Back to Portfolio</button>
+                <button class="close-button" id="close-button">×</button>
             </div>
-            <div class="content-body">
-                <!-- Dynamic content will be loaded here -->
+            <div class="modal-content">
+                <div class="modal-title-section">
+                    <h2 class="modal-title" id="modal-title"></h2>
+                    <p class="modal-description" id="modal-description"></p>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact">

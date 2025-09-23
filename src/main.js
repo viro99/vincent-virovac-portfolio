@@ -21,14 +21,19 @@ class App {
   }
 
   init() {
+    console.log('App: Starting initialization');
+    
     // Initialize analytics
     this.analytics.init();
     
     // Initialize name wheel animation
     this.nameWheel.init();
     
-    // Initialize subject areas
-    this.subjectAreas.init();
+    // Initialize subject areas with higher priority (async)
+    setTimeout(async () => {
+      console.log('App: Initializing subject areas');
+      await this.subjectAreas.init();
+    }, 100);
     
     // Initialize contact form
     this.contactForm.init();
@@ -44,30 +49,19 @@ class App {
   }
 
   setupScrollAnimations() {
-    // Animate tagline on scroll
+    // Animate tagline immediately (no delay)
     gsap.fromTo('.tagline', 
       { opacity: 0, y: 30 },
       { 
         opacity: 1, 
         y: 0, 
         duration: 1,
-        delay: 2,
+        delay: 0.5,
         ease: 'power2.out'
       }
     );
 
-    // Animate area cards
-    gsap.fromTo('.area-card', 
-      { opacity: 0, y: 50 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 0.8,
-        stagger: 0.2,
-        delay: 2.5,
-        ease: 'power2.out'
-      }
-    );
+    // Note: subject cards are animated in subjectAreas.js when created
   }
 }
 
