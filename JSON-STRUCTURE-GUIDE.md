@@ -35,7 +35,11 @@ public/data/
     "website": "string|null",   // Personal website URL
     "github": "string|null",    // GitHub profile URL
     "linkedin": "string|null",  // LinkedIn profile URL
-    "twitter": "string|null"    // Twitter handle
+    "twitter": "string|null",   // Twitter handle
+    "images": {
+      "profile": "string",      // Main profile photo path
+      "profileAlt": "string"    // Alternative profile photo path
+    }
   },
   "statistics": {
     "yearsProfessional": number, // Years of experience
@@ -112,7 +116,11 @@ public/data/
       ],
       "skills": [                // Skills learned/technologies used
         "string"
-      ]
+      ],
+      "images": {
+        "logo": "string|null",   // Company/institution logo
+        "showcaseimg": "string|null" // Work/project showcase image
+      }
     }
   ]
 }
@@ -181,9 +189,10 @@ public/data/
       "technologies": [          // Technical stack used
         "string"
       ],
-      "images": [                // Project screenshots/photos
-        "string"                 // Image file paths
-      ],
+      "images": {
+        "logo": "string|null",   // Company/project logo
+        "showcaseimg": "string|null" // Main project showcase image
+      },
       "links": {
         "demo": "string|null",    // Live demo URL
         "code": "string|null",    // Source code URL
@@ -221,6 +230,64 @@ public/data/
 - **Status:** Use consistent status values across all projects
 - **Images:** Store in `/public/images/projects/`
 - **Links:** Only include working URLs, use `null` for unavailable links
+
+---
+
+## 🖼️ **Image Management System**
+
+### **Image Types & Purposes:**
+
+#### **Logo Images:**
+- **Company logos** for work experience entries
+- **Institution logos** for education entries  
+- **Project logos** for branded projects
+- **Best format:** PNG (supports transparency) or SVG (scalable)
+- **Recommended size:** 200x200px or smaller
+
+#### **Showcase Images:**
+- **Work photos** showing you in action
+- **Project screenshots** or demo images
+- **Portfolio pieces** demonstrating skills
+- **Best format:** JPG (photos) or PNG (screenshots)
+- **Recommended size:** 800x600px or 16:9 aspect ratio
+
+#### **Profile Images:**
+- **Primary profile photo** for main display
+- **Alternative profile** for different contexts
+- **Best format:** JPG for photos, PNG for graphics
+- **Recommended size:** 400x400px (square aspect ratio)
+
+### **Supported Image Formats:**
+
+| Format | Best Use Case | Pros | Cons |
+|--------|---------------|------|------|
+| **JPG/JPEG** | Photos, showcase images | Small file size, universal support | No transparency, lossy compression |
+| **PNG** | Logos, graphics with transparency | Lossless quality, transparency support | Larger file size |
+| **GIF** | Simple animations | Animation support, small file size | Limited colors, old format |
+| **WebP** | Modern web images | Best compression, quality | Limited older browser support |
+| **SVG** | Vector logos, icons | Infinitely scalable, tiny file size | Only for vector graphics |
+
+### **File Organization:**
+```
+public/images/
+├── profile.jpg           # Main profile photo
+├── profile.png           # Alternative profile photo
+├── logos/
+│   ├── company-name.png  # Company logos
+│   ├── university.jpg    # Institution logos
+│   └── project-logo.svg  # Project branding
+└── showcase/
+    ├── work-photo1.jpg   # Work demonstration photos
+    ├── project-demo.png  # Project screenshots
+    └── portfolio-piece.jpg # Creative work samples
+```
+
+### **Image Optimization Tips:**
+- **Compress images** before uploading (use tools like TinyPNG)
+- **Use appropriate formats** - JPG for photos, PNG for graphics
+- **Maintain aspect ratios** to prevent distortion
+- **Keep file sizes** under 500KB for fast loading
+- **Use descriptive filenames** for better organization
 
 ---
 
