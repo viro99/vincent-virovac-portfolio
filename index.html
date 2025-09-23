@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Virovac - Creative Mercenary</title>
+    <meta name="description" content="Vincent Virovac - Multi-disciplinary professional specializing in fintech, media, and creative solutions">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P49MEVNXDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P49MEVNXDW');
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="nav-header">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="initials">VWV</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="/resume.pdf" class="nav-link resume-download" download>Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Landing Section -->
+    <main class="landing-container">
+        <!-- Animated Name Wheel -->
+        <section class="name-wheel-section">
+            <div class="container">
+                <div class="wheel">
+                    <p class="txt">Vincent Virovac</p>
+                </div>
+            </div>
+            <div class="tagline">
+                <h2 class="tagline-text">Creative Mercenary</h2>
+                <p class="subtitle">Rapid prototyping • Intuitive design • Strategic thinking</p>
+            </div>
+        </section>
+
+        <!-- Subject Areas Navigation -->
+        <section class="subject-areas">
+            <div class="areas-container">
+                <div class="area-card fintech" data-area="fintech">
+                    <div class="area-content">
+                        <h3>Fintech</h3>
+                        <p>10+ year outlook on cryptocurrency and financial technology</p>
+                        <div class="area-icon">₿</div>
+                    </div>
+                </div>
+                
+                <div class="area-card media" data-area="media">
+                    <div class="area-content">
+                        <h3>Media</h3>
+                        <p>Content creation, interviewing, and creative services</p>
+                        <div class="area-icon">🎬</div>
+                    </div>
+                </div>
+                
+                <div class="area-card hobbies" data-area="hobbies">
+                    <div class="area-content">
+                        <h3>Hobbies</h3>
+                        <p>3D printing, IoT, hardware wallets, and AI experiments</p>
+                        <div class="area-icon">⚡</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dynamic Content Display Area -->
+    <section class="content-display" id="content-display">
+        <div class="content-container">
+            <button class="close-content" aria-label="Close content">×</button>
+            <div class="content-header">
+                <h2 class="content-title"></h2>
+                <p class="content-description"></p>
+            </div>
+            <div class="content-body">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2>Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Ready to bring rapid prototyping and creative solutions to your next project.</p>
+                    <div class="contact-details">
+                        <p>📧 vincentwvirovac@gmail.com</p>
+                        <p>📍 Taipei, Taiwan</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

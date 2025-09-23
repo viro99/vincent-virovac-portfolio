@@ -1,0 +1,138 @@
+{
+  "workExperience": [
+    {
+      "id": 1,
+      "company": "AtomicKids",
+      "location": "Taipei, Taiwan",
+      "position": "Teacher - STEM and CS Clubs",
+      "startDate": "2022",
+      "endDate": "2024",
+      "current": false,
+      "description": "Teaching STEM and Computer Science concepts to children through hands-on projects and interactive learning.",
+      "achievements": [
+        "Designing Python coding projects for BBC Microbit controllers",
+        "Introducing computer science concepts to young learners",
+        "Utilizing Microsoft PowerPoint, MS/Google Sheets, and Basic Python for curriculum delivery"
+      ],
+      "skills": ["Python", "BBC Microbit", "STEM Education", "Microsoft PowerPoint", "Google Sheets", "Curriculum Design"],
+      "type": "employment"
+    },
+    {
+      "id": 2,
+      "company": "Freelance",
+      "location": "USA & Taiwan",
+      "position": "Cryptocurrency Consulting",
+      "startDate": "2017",
+      "endDate": "Present",
+      "current": true,
+      "description": "Providing comprehensive cryptocurrency consulting services through word-of-mouth referrals.",
+      "achievements": [
+        "In-depth guidance on safe investing and managing cryptocurrency",
+        "Recovering lost funds for clients",
+        "Custom-tailored one-on-one initial setup and organization",
+        "Market research and education services",
+        "Supporting local cryptocurrency meetups"
+      ],
+      "skills": ["Cryptocurrency", "Investment Strategy", "Market Analysis", "Client Consultation", "Fund Recovery", "Community Building"],
+      "type": "consulting"
+    },
+    {
+      "id": 3,
+      "company": "NEM Blockchain Foundation",
+      "location": "USA & Taiwan",
+      "position": "Volunteer Support",
+      "startDate": "2016",
+      "endDate": "2019",
+      "current": false,
+      "description": "Volunteer work supporting the NEM blockchain ecosystem and community development.",
+      "achievements": [
+        "Assisting NEM foundation's Vice President at Computex and meetups",
+        "NEM Tech Support for community members",
+        "Ledger Hardware Wallet integration workgroup participation",
+        "Bug testing desktop wallet and hardware wallet integration"
+      ],
+      "skills": ["Blockchain Technology", "Community Support", "Technical Support", "Event Support", "Quality Assurance", "Hardware Wallet Integration"],
+      "type": "volunteer"
+    },
+    {
+      "id": 4,
+      "company": "Temporary Truth Creative",
+      "location": "Taipei City, Taiwan",
+      "position": "Subject Matter Expert Intern",
+      "photo": "assets/images/TTClogo.jpg",
+      "startDate": "2024-10-04",
+      "endDate": "2024-12-31",
+      "current": false,
+      "description": "Internship at Temporary Truth Creative, a forward-thinking marketing consultancy. Rotated through departments to gain experience in creative services, photography, marketing strategy, and talent management. Provided blockchain expertise for client pitches, assisted in client meetings, conducted interviews with prominent figures, and contributed to content creation and social media campaigns.",
+      "achievements": [
+        "Investigated leads for potential client projects",
+        "Provided reports on interview subjects for speaker preparation",
+        "Discovered advanced generative video tools for future projects",
+        "Improved skills in photography and film production"
+      ],
+      "skills": ["Creative Support", "Entrepreneurship", "Networking", "Marketing", "Operations Assistance", "Interviewing", "Podcasting", "Film Editing", "Generative AI Video", "ComfyUI", "Blockchain Consulting", "Client Relations", "Research", "Photography", "Content Creation", "Copywriting"],
+      "type": "internship"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "Ming Chuan University",
+      "location": "Taipei, Taiwan",
+      "degree": "Bachelor of Science",
+      "field": "International Business and Trade",
+      "startDate": "2020",
+      "endDate": "2025",
+      "current": false,
+      "gpa": null,
+      "achievements": [
+        "Created usable backend tools and personal academic organizational webscraping tools with Python libraries such as pandas, matplotlib, Numpy, Jupyter for data analysis and visualization",
+        "Covered topics including data wrangling, statistical analysis, and big data methodologies"
+      ],
+      "skills": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Data Analysis", "Statistical Analysis", "Web Scraping", "Big Data"]
+    }
+  ],
+  "additionalEducation": [
+    {
+      "id": 1,
+      "institution": "Google",
+      "program": "Foundations of Project Management",
+      "year": "2024",
+      "type": "certification",
+      "description": "Professional certification in project management fundamentals"
+    },
+    {
+      "id": 2,
+      "institution": "CodeCademy, FreeCodeCamp, Michigan Tech P4e",
+      "program": "CS and Web Development Intro Course",
+      "startDate": "2018",
+      "endDate": "2024",
+      "type": "online-courses",
+      "description": "Comprehensive self-directed learning in computer science and web development"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Fluent",
+      "level": "Native/Bilingual"
+    },
+    {
+      "language": "French",
+      "proficiency": "Fluent",
+      "level": "Professional Working Proficiency"
+    },
+    {
+      "language": "Mandarin Chinese (Traditional)",
+      "proficiency": "Basic",
+      "level": "Conversational"
+    }
+  ],
+  "additionalInfo": {
+    "languageStudy": {
+      "institution": "Mandarin Learning Center at Chinese Culture University",
+      "location": "Taipei",
+      "description": "Formal study of Mandarin Chinese language and culture"
+    }
+  }
+}

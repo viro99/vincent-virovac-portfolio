@@ -1,0 +1,42 @@
+{
+  "personalInfo": {
+    "name": "Vincent Virovac",
+    "phone": "+886 968117844",
+    "email": "vincentwvirovac@gmail.com",
+    "location": "Taipei, Taiwan",
+    "title": "Multi-disciplinary Professional",
+    "subtitle": "",
+    "tagline": "Business Consulting & Creative Services",
+    "languages": "",
+    "bio": "I am a recent graduate in International Business and Trade BA with diverse experience in STEM education, business consulting, and creative services. My background spans across educational technology, client consulting, content creation, and international business, allowing me to bring a unique perspective to every project.",
+    "availability": "Open to new opportunities",
+    "website": null,
+    "github": null,
+    "linkedin": null,
+    "twitter": null
+  },
+  "statistics": {
+    "yearsProfessional": 8,
+    "languages": 3,
+    "projects": 15,
+    "studentsTaught": 50
+  },
+  "highlights": [
+    {
+      "icon": "🎓",
+      "text": "International Business & Trade BSc (2020-2025)"
+    },
+    {
+      "icon": "💼",
+      "text": "8+ Years Professional Experience"
+    },
+    {
+      "icon": "👨‍🏫",
+      "text": "STEM & CS Education Specialist"
+    },
+    {
+      "icon": "🌍",
+      "text": "Multilingual Professional (EN/FR/ZH)"
+    }
+  ]
+}
