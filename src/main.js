@@ -26,6 +26,9 @@ class App {
     // Initialize analytics
     this.analytics.init();
     
+    // Make analytics available globally for debugging
+    window.app = { analytics: this.analytics };
+    
     // Initialize name wheel animation
     this.nameWheel.init();
     
