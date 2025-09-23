@@ -121,7 +121,7 @@ export class NameWheelAnimation {
         immediateRender: false
       });
 
-    // Adjust speed
-    gtl.timeScale(2);
+    // Adjust speed - slowed down by 50%
+    gtl.timeScale(1);
   }
 }
