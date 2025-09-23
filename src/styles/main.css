@@ -224,9 +224,10 @@ a:hover {
 
 .areas-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
+  width: 100%;
 }
 
 .area-card {
@@ -239,6 +240,10 @@ a:hover {
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .area-card::before {
@@ -571,6 +576,13 @@ a:hover {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .areas-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-sm);
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --font-size-xl: 2.5rem;
