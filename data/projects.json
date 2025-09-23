@@ -34,7 +34,7 @@
       "status": "ongoing",
       "technologies": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Web Scraping"],
       "images": {
-        "logo": "/vincent-virovac-portfolio/images/MingChuanUniversitylogo.jpg",
+        "logo": "./images/MingChuanUniversitylogo.jpg",
         "showcaseimg": null
       },
       "links": {

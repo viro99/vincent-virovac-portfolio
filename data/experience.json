@@ -84,7 +84,7 @@
       "skills": ["Creative Support", "Entrepreneurship", "Networking", "Marketing", "Operations Assistance", "Interviewing", "Podcasting", "Film Editing", "Generative AI Video", "ComfyUI", "Blockchain Consulting", "Client Relations", "Research", "Photography", "Content Creation", "Copywriting"],
       "type": "internship",
       "images": {
-        "logo": "/vincent-virovac-portfolio/images/TTClogo.jpg",
+        "logo": "./images/TTClogo.jpg",
         "showcaseimg": null
       }
     }
@@ -106,7 +106,7 @@
       ],
       "skills": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Data Analysis", "Statistical Analysis", "Web Scraping", "Big Data"],
       "images": {
-        "logo": "/vincent-virovac-portfolio/images/MingChuanUniversitylogo.jpg",
+        "logo": "./images/MingChuanUniversitylogo.jpg",
         "showcaseimg": null
       }
     }

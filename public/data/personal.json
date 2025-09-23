@@ -15,8 +15,8 @@
     "linkedin": null,
     "twitter": null,
     "images": {
-      "profile": "/vincent-virovac-portfolio/images/profile.jpg",
-      "profileAlt": "/vincent-virovac-portfolio/images/profile.png"
+      "profile": "./images/profile.jpg",
+      "profileAlt": "./images/profile.png"
     }
   },
   "statistics": {
