@@ -1,4 +1,4 @@
-# Vincent Virovac - Creative Mercenary Portfolio
+# Vincent Virovac - Professional Portfolio
 
 A modern, interactive resume website showcasing expertise in Fintech, Media, and Creative projects. Built with Vite, GSAP animations, and Google Analytics tracking.
 
@@ -140,7 +140,16 @@ Access your data at: [Google Analytics Dashboard](https://analytics.google.com/)
 - Adjust GSAP animations in `/src/js/` modules
 - Name wheel animation in `nameWheel.js`
 
-## 🔧 Key Features Explained
+## � **Content Management**
+
+### JSON Structure & Formatting
+This website uses a structured JSON-based content system. See **[JSON-STRUCTURE-GUIDE.md](./JSON-STRUCTURE-GUIDE.md)** for comprehensive documentation on:
+
+- Complete schema reference for all JSON files
+- Field requirements and data types
+- Content categorization system
+- Quick update procedures
+- Best practices and validation checklist
 
 ### Smart Content Categorization
 The `DataProcessor` automatically sorts your experiences and projects into three areas based on keywords:
@@ -207,8 +216,8 @@ Contact form submissions are tracked in analytics. Consider integrating with:
 
 ---
 
-**Built by Vincent Virovac** - Creative Mercenary for Hire
+**Built by Vincent Virovac**
 - 📧 vincentwvirovac@gmail.com  
 - 📍 Taipei, Taiwan
 
-*Ready to bring rapid prototyping and creative solutions to your next project.*
+*Professional portfolio showcasing expertise in business consulting, creative services, and technical projects.*
