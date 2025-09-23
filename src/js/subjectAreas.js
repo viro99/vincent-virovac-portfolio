@@ -5,7 +5,8 @@ export class SubjectAreaManager {
     this.experienceData = null;
     this.projectsData = null;
     this.areas = null;
-    this.modalOverlay = document.querySelector('.modal-overlay');
+    this.pageContainer = document.querySelector('#section-page');
+    this.landingContainer = document.querySelector('.landing-container');
     this.currentArea = null;
     this.engagementStartTime = null;
     
@@ -49,9 +50,22 @@ export class SubjectAreaManager {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
         this.initializeCards();
+        this.handleInitialRoute();
       });
     } else {
       this.initializeCards();
+      this.handleInitialRoute();
+    }
+  }
+
+  handleInitialRoute() {
+    // Check if we're on a section page initially (direct URL access)
+    const path = window.location.pathname;
+    const match = path.match(/\/vincent-virovac-portfolio\/([^\/]+)$/);
+    
+    if (match && this.cardData[match[1]]) {
+      // Show the section directly without animation
+      this.showContent(match[1], false);
     }
   }
 
@@ -227,35 +241,28 @@ export class SubjectAreaManager {
       });
     });
 
-    // Modal close buttons
+    // Page navigation buttons
     const backButton = document.querySelector('.back-button');
-    const closeButton = document.querySelector('.close-button');
 
     if (backButton) {
       backButton.addEventListener('click', () => {
-        this.closeContent();
+        this.navigateToHome();
       });
     }
 
-    if (closeButton) {
-      closeButton.addEventListener('click', () => {
-        this.closeContent();
-      });
-    }
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', (e) => {
+      if (e.state && e.state.section) {
+        this.showContent(e.state.section, false); // Don't push state again
+      } else {
+        this.navigateToHome(false); // Don't push state again
+      }
+    });
 
-    // Click outside modal to close
-    if (this.modalOverlay) {
-      this.modalOverlay.addEventListener('click', (e) => {
-        if (e.target === this.modalOverlay) {
-          this.closeContent();
-        }
-      });
-    }
-
-    // ESC key to close
+    // ESC key to go back
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && this.currentArea) {
-        this.closeContent();
+        this.navigateToHome();
       }
     });
   }
@@ -299,26 +306,105 @@ export class SubjectAreaManager {
       });
     }
 
-    this.showContent(area);
+    this.navigateToSection(area);
   }
 
-  showContent(area) {
+  navigateToSection(area) {
     const data = this.cardData[area];
     if (!data) return;
 
-    const modalTitle = document.querySelector('.modal-title');
-    const modalDescription = document.querySelector('.modal-description');
-    const modalBody = document.querySelector('.modal-body');
+    // Update URL
+    const newPath = `/vincent-virovac-portfolio/${area}`;
+    history.pushState({ section: area }, data.title, newPath);
 
-    if (!this.modalOverlay || !modalTitle || !modalDescription || !modalBody) return;
+    this.showContent(area, true);
+  }
+
+  showContent(area, animate = true) {
+    const data = this.cardData[area];
+    if (!data) return;
+
+    const sectionTitle = document.querySelector('#section-title');
+    const sectionDescription = document.querySelector('#section-description');
+    const sectionBody = document.querySelector('#section-body');
+
+    if (!this.pageContainer || !sectionTitle || !sectionDescription || !sectionBody) return;
 
     // Update content
-    modalTitle.textContent = data.title;
-    modalDescription.textContent = data.description;
-    modalBody.innerHTML = this.renderContent(data.content);
+    sectionTitle.textContent = data.title;
+    sectionDescription.textContent = data.description;
+    sectionBody.innerHTML = this.renderContent(data.content);
 
-    // Show modal with animation
-    this.modalOverlay.classList.add('active');
+    // Show page with animation
+    this.pageContainer.style.display = 'block';
+    
+    if (animate) {
+      // Animate out landing page and in section page
+      gsap.to(this.landingContainer, {
+        opacity: 0,
+        x: -50,
+        duration: 0.3,
+        ease: 'power2.in',
+        onComplete: () => {
+          if (this.landingContainer) {
+            this.landingContainer.style.display = 'none';
+          }
+        }
+      });
+
+      gsap.fromTo(this.pageContainer, 
+        { opacity: 0, x: 100 },
+        { opacity: 1, x: 0, duration: 0.4, ease: 'power2.out', delay: 0.1 }
+      );
+    } else {
+      // Instant show (for back/forward navigation)
+      if (this.landingContainer) {
+        this.landingContainer.style.display = 'none';
+      }
+      this.pageContainer.style.opacity = '1';
+      this.pageContainer.style.transform = 'translateX(0)';
+    }
+
+    this.pageContainer.classList.add('active');
+  }
+
+  navigateToHome(updateHistory = true) {
+    if (updateHistory) {
+      history.pushState(null, 'Vincent Virovac Portfolio', '/vincent-virovac-portfolio/');
+    }
+
+    // Animate out section page and in landing page
+    gsap.to(this.pageContainer, {
+      opacity: 0,
+      x: 100,
+      duration: 0.3,
+      ease: 'power2.in',
+      onComplete: () => {
+        this.pageContainer.style.display = 'none';
+        this.pageContainer.classList.remove('active');
+      }
+    });
+
+    if (this.landingContainer) {
+      this.landingContainer.style.display = 'flex';
+      gsap.fromTo(this.landingContainer,
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 0.4, ease: 'power2.out', delay: 0.1 }
+      );
+    }
+
+    // Track engagement duration
+    if (this.engagementStartTime && window.gtag) {
+      const duration = Date.now() - this.engagementStartTime;
+      window.gtag('event', 'engagement_time', {
+        section_name: this.currentArea,
+        duration: duration,
+        event_category: 'engagement'
+      });
+    }
+
+    this.currentArea = null;
+    this.engagementStartTime = null;
   }
 
   renderContent(content) {
@@ -388,24 +474,5 @@ export class SubjectAreaManager {
     `;
   }
 
-  closeContent() {
-    // Track engagement duration
-    if (this.engagementStartTime && window.gtag) {
-      const duration = Date.now() - this.engagementStartTime;
-      window.gtag('event', 'engagement_time', {
-        section_name: this.currentArea,
-        duration: duration,
-        event_category: 'engagement'
-      });
-    }
 
-    if (this.modalOverlay) {
-      this.modalOverlay.classList.remove('active');
-    }
-
-    setTimeout(() => {
-      this.currentArea = null;
-      this.engagementStartTime = null;
-    }, 300);
-  }
 }
