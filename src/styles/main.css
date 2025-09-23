@@ -482,7 +482,27 @@ a:hover {
 }
 
 .item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
+}
+
+.company-logo {
+  flex-shrink: 0;
+}
+
+.company-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.header-text {
+  flex: 1;
 }
 
 .item-header h3 {

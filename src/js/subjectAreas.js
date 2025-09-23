@@ -117,7 +117,8 @@ export class SubjectAreaManager {
           duration: `${exp.startDate} - ${exp.endDate || 'Present'}`,
           description: exp.description,
           achievements: exp.achievements || [],
-          technologies: exp.skills || []
+          technologies: exp.skills || [],
+          images: exp.images || null
         });
       });
     }
@@ -145,7 +146,8 @@ export class SubjectAreaManager {
           description: project.description,
           technologies: project.technologies || project.tags || [],
           link: project.links?.demo,
-          github: project.links?.code
+          github: project.links?.code,
+          images: project.images || null
         });
       });
     }
@@ -420,8 +422,13 @@ export class SubjectAreaManager {
     return `
       <div class="content-item experience-item">
         <div class="item-header">
-          <h3>${exp.title}</h3>
-          <p class="company">${exp.company} • ${exp.duration}</p>
+          ${exp.images?.logo ? `<div class="company-logo">
+            <img src="${exp.images.logo}" alt="${exp.company} logo" />
+          </div>` : ''}
+          <div class="header-text">
+            <h3>${exp.title}</h3>
+            <p class="company">${exp.company} • ${exp.duration}</p>
+          </div>
         </div>
         <p class="description">${exp.description}</p>
         ${exp.achievements && exp.achievements.length > 0 ? `
@@ -445,10 +452,15 @@ export class SubjectAreaManager {
     return `
       <div class="content-item project-item">
         <div class="item-header">
-          <h3>${project.title}</h3>
-          <div class="project-links">
-            ${project.link ? `<a href="${project.link}" target="_blank" rel="noopener">Live Demo</a>` : ''}
-            ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener">GitHub</a>` : ''}
+          ${project.images?.logo ? `<div class="company-logo">
+            <img src="${project.images.logo}" alt="${project.title} logo" />
+          </div>` : ''}
+          <div class="header-text">
+            <h3>${project.title}</h3>
+            <div class="project-links">
+              ${project.link ? `<a href="${project.link}" target="_blank" rel="noopener">Live Demo</a>` : ''}
+              ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener">GitHub</a>` : ''}
+            </div>
           </div>
         </div>
         <p class="description">${project.description}</p>

@@ -13,7 +13,11 @@
     "website": null,
     "github": null,
     "linkedin": null,
-    "twitter": null
+    "twitter": null,
+    "images": {
+      "profile": "/images/profile.jpg",
+      "profileAlt": "/images/profile.png"
+    }
   },
   "statistics": {
     "yearsProfessional": 8,

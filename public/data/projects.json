@@ -11,7 +11,10 @@
       "company": "AtomicKids",
       "status": "completed",
       "technologies": ["Python", "BBC Microbit", "MicroPython"],
-      "images": [],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
       "links": {
         "demo": null,
         "code": null,
@@ -30,7 +33,10 @@
       "company": "Ming Chuan University",
       "status": "ongoing",
       "technologies": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Web Scraping"],
-      "images": [],
+      "images": {
+        "logo": "/images/MingChuanUniversitylogo.jpg",
+        "showcaseimg": null
+      },
       "links": {
         "demo": null,
         "code": null,
@@ -49,7 +55,10 @@
       "company": "NEM Blockchain Foundation",
       "status": "completed",
       "technologies": ["NEM Blockchain", "Ledger Hardware Wallet", "Desktop Applications"],
-      "images": [],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
       "links": {
         "demo": null,
         "code": null,
@@ -68,7 +77,10 @@
       "company": "Freelance",
       "status": "ongoing",
       "technologies": ["Market Analysis Tools", "Portfolio Tracking", "Security Protocols"],
-      "images": [],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
       "links": {
         "demo": null,
         "code": null,
@@ -87,7 +99,10 @@
       "company": "Community",
       "status": "ongoing",
       "technologies": ["Event Management", "Community Platforms", "Presentation Tools"],
-      "images": [],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
       "links": {
         "demo": null,
         "code": null,
@@ -106,7 +121,10 @@
       "company": "NEM Blockchain Foundation",
       "status": "completed",
       "technologies": ["NEM Blockchain", "Conference Technology", "Support Tools"],
-      "images": [],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
       "links": {
         "demo": null,
         "code": null,

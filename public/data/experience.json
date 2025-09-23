@@ -15,7 +15,11 @@
         "Utilizing Microsoft PowerPoint, MS/Google Sheets, and Basic Python for curriculum delivery"
       ],
       "skills": ["Python", "BBC Microbit", "STEM Education", "Microsoft PowerPoint", "Google Sheets", "Curriculum Design"],
-      "type": "employment"
+      "type": "employment",
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      }
     },
     {
       "id": 2,
@@ -34,7 +38,11 @@
         "Supporting local cryptocurrency meetups"
       ],
       "skills": ["Cryptocurrency", "Investment Strategy", "Market Analysis", "Client Consultation", "Fund Recovery", "Community Building"],
-      "type": "consulting"
+      "type": "consulting",
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      }
     },
     {
       "id": 3,
@@ -52,14 +60,17 @@
         "Bug testing desktop wallet and hardware wallet integration"
       ],
       "skills": ["Blockchain Technology", "Community Support", "Technical Support", "Event Support", "Quality Assurance", "Hardware Wallet Integration"],
-      "type": "volunteer"
+      "type": "volunteer",
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      }
     },
     {
       "id": 4,
       "company": "Temporary Truth Creative",
       "location": "Taipei City, Taiwan",
       "position": "Subject Matter Expert Intern",
-      "photo": "assets/images/TTClogo.jpg",
       "startDate": "2024-10-04",
       "endDate": "2024-12-31",
       "current": false,
@@ -71,7 +82,11 @@
         "Improved skills in photography and film production"
       ],
       "skills": ["Creative Support", "Entrepreneurship", "Networking", "Marketing", "Operations Assistance", "Interviewing", "Podcasting", "Film Editing", "Generative AI Video", "ComfyUI", "Blockchain Consulting", "Client Relations", "Research", "Photography", "Content Creation", "Copywriting"],
-      "type": "internship"
+      "type": "internship",
+      "images": {
+        "logo": "/images/TTClogo.jpg",
+        "showcaseimg": null
+      }
     }
   ],
   "education": [
@@ -89,7 +104,11 @@
         "Created usable backend tools and personal academic organizational webscraping tools with Python libraries such as pandas, matplotlib, Numpy, Jupyter for data analysis and visualization",
         "Covered topics including data wrangling, statistical analysis, and big data methodologies"
       ],
-      "skills": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Data Analysis", "Statistical Analysis", "Web Scraping", "Big Data"]
+      "skills": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Data Analysis", "Statistical Analysis", "Web Scraping", "Big Data"],
+      "images": {
+        "logo": "/images/MingChuanUniversitylogo.jpg",
+        "showcaseimg": null
+      }
     }
   ],
   "additionalEducation": [
