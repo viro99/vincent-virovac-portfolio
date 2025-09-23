@@ -9,6 +9,11 @@ export class AnalyticsManager {
       console.warn('Google Analytics not loaded');
       return;
     }
+
+    // Initialize scroll depth tracking
+    this.trackScrollDepth();
+    
+    console.log('Analytics initialized with GA4 ID:', this.GA_ID);
   }
 
   // Track custom events
@@ -23,6 +28,25 @@ export class AnalyticsManager {
     });
 
     console.log('Analytics Event:', action, parameters);
+  }
+
+  // Debug method to verify analytics setup
+  debugAnalytics() {
+    console.log('=== Analytics Debug Info ===');
+    console.log('GA4 ID:', this.GA_ID);
+    console.log('gtag available:', typeof gtag !== 'undefined');
+    console.log('dataLayer available:', typeof window.dataLayer !== 'undefined');
+    console.log('Current page:', window.location.href);
+    
+    if (typeof gtag !== 'undefined') {
+      // Send a test event
+      this.trackEvent('debug_test', {
+        debug: true,
+        timestamp: new Date().toISOString()
+      });
+      console.log('Test event sent successfully');
+    }
+    console.log('==============================');
   }
 
   // Track subject area engagement
