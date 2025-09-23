@@ -12,9 +12,9 @@ export class SubjectAreaManager {
     
     // Initialize card data structure
     this.cardData = {
-      fintech: { title: 'Fintech', icon: '🏦', description: 'Building the future of finance', content: [] },
-      media: { title: 'Media', icon: '📺', description: 'Creating engaging digital experiences', content: [] },
-      hobbies: { title: 'Hobbies', icon: '🎯', description: 'Passion projects and interests', content: [] }
+      fintech: { title: 'Fintech', icon: '🏦', content: [] },
+      media: { title: 'Media', icon: '📺', content: [] },
+      hobbies: { title: 'Hobbies', icon: '🎯', content: [] }
     };
   }
 
@@ -202,7 +202,6 @@ export class SubjectAreaManager {
     card.innerHTML = `
       <div class="card-icon">${data.icon}</div>
       <h3 class="card-title">${data.title}</h3>
-      <p class="card-description">${data.description}</p>
     `;
 
     return card;
@@ -325,14 +324,12 @@ export class SubjectAreaManager {
     if (!data) return;
 
     const sectionTitle = document.querySelector('#section-title');
-    const sectionDescription = document.querySelector('#section-description');
     const sectionBody = document.querySelector('#section-body');
 
-    if (!this.pageContainer || !sectionTitle || !sectionDescription || !sectionBody) return;
+    if (!this.pageContainer || !sectionTitle || !sectionBody) return;
 
     // Update content
     sectionTitle.textContent = data.title;
-    sectionDescription.textContent = data.description;
     sectionBody.innerHTML = this.renderContent(data.content);
 
     // Show page with animation
