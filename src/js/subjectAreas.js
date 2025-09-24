@@ -334,6 +334,8 @@ export class SubjectAreaManager {
     // Update content with special Media effect
     if (area === 'media') {
       sectionTitle.innerHTML = this.getMediaAnimatedTitle();
+      // Add fallback text in case animation fails
+      sectionTitle.innerHTML += `<div class="media-fallback" style="display: none; color: white; font-size: 3rem;">${data.title}</div>`;
     } else {
       sectionTitle.textContent = data.title;
     }
@@ -555,6 +557,15 @@ export class SubjectAreaManager {
   }
 
   initMediaAnimation() {
+    console.log('Initializing Media animation...');
+    
+    // Ensure the media stage is visible first
+    const mediaStage = document.querySelector('.media-stage');
+    if (!mediaStage) {
+      console.warn('Media stage not found');
+      return;
+    }
+
     // Use imported SplitText for character-by-character animation
     let mediaST = new SplitText('.media-name', {
       type: "chars", 

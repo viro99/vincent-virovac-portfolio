@@ -463,7 +463,8 @@ a:hover {
   background: transparent;
   cursor: pointer;
   overflow: hidden;
-  visibility: hidden;
+  visibility: visible;
+  opacity: 1;
 }
 
 .media-content {
