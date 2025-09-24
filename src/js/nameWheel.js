@@ -24,11 +24,15 @@ export class NameWheelAnimation {
   }
 
   setupText() {
-    // Split text into characters
+    // Ensure clean text content
+    this.txt.textContent = this.txt.textContent.trim();
+    
+    // Split text into characters with proper spacing
     this.mySplitText = new SplitText(this.txt, {
       type: "chars", 
-      charsClass: "char", 
-      position: "absolute"
+      charsClass: "char",
+      position: "absolute",
+      reduceWhiteSpace: false
     });
   }
 

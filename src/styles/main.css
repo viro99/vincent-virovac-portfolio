@@ -187,11 +187,15 @@ a:hover {
   line-height: 1;
   white-space: nowrap;
   font-family: var(--font-primary);
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .char {
   text-align: center;
   backface-visibility: hidden;
+  display: inline-block;
+  white-space: pre;
 }
 
 .tagline {
