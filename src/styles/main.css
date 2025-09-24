@@ -494,17 +494,7 @@ a:hover {
   transition: var(--transition-smooth);
 }
 
-.content-item::after {
-  content: '';
-  position: absolute;
-  left: -4px;
-  top: var(--spacing-sm);
-  width: 10px;
-  height: 10px;
-  background: var(--color-text);
-  border-radius: 50%;
-  transition: var(--transition-smooth);
-}
+
 
 .content-item:hover {
   transform: translateX(8px);
@@ -513,13 +503,6 @@ a:hover {
 .content-item:hover::before {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4));
   width: 3px;
-}
-
-.content-item:hover::after {
-  background: var(--color-text);
-  width: 12px;
-  height: 12px;
-  left: -5px;
 }
 
 .item-header {
