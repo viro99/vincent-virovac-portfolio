@@ -455,6 +455,70 @@ a:hover {
   background-clip: text;
 }
 
+/* Media Animated Title Effect */
+.media-stage {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.media-content {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  overflow: hidden;
+  width: 120%;
+  height: 120%;
+}
+
+.media-band {
+  position: relative;
+  margin: 0;
+  height: 120px;
+  font-weight: 700;
+  color: #d71111;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  line-height: 0.8;
+  font-family: var(--font-primary);
+}
+
+.media-names {
+  display: block;
+  position: relative;
+  width: 150%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.media-name {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+  font-weight: 700;
+}
+
+.media-name--red {
+  color: #ff4444;
+}
+
+.media-name--blue {
+  color: #00cec9;
+  position: absolute;
+  top: 8px;
+}
+
+.mediaChar {
+  display: inline-block;
+  position: relative;
+}
+
 .section-description {
   font-size: var(--font-size-lg);
   color: var(--color-text-secondary);

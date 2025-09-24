@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import { SplitText } from 'gsap/SplitText';
 
 export class SubjectAreaManager {
   constructor() {
@@ -330,8 +331,12 @@ export class SubjectAreaManager {
 
     if (!this.pageContainer || !sectionTitle || !sectionBody) return;
 
-    // Update content
-    sectionTitle.textContent = data.title;
+    // Update content with special Media effect
+    if (area === 'media') {
+      sectionTitle.innerHTML = this.getMediaAnimatedTitle();
+    } else {
+      sectionTitle.textContent = data.title;
+    }
     sectionBody.innerHTML = this.renderContent(data.content);
 
     // Show page with animation
@@ -353,7 +358,18 @@ export class SubjectAreaManager {
 
       gsap.fromTo(this.pageContainer, 
         { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 0.4, ease: 'power2.out', delay: 0.1 }
+        { 
+          opacity: 1, 
+          x: 0, 
+          duration: 0.4, 
+          ease: 'power2.out', 
+          delay: 0.1,
+          onComplete: () => {
+            if (area === 'media') {
+              setTimeout(() => this.initMediaAnimation(), 200);
+            }
+          }
+        }
       );
     } else {
       // Instant show (for back/forward navigation)
@@ -362,6 +378,10 @@ export class SubjectAreaManager {
       }
       this.pageContainer.style.opacity = '1';
       this.pageContainer.style.transform = 'translateX(0)';
+      
+      if (area === 'media') {
+        setTimeout(() => this.initMediaAnimation(), 300);
+      }
     }
 
     this.pageContainer.classList.add('active');
@@ -481,6 +501,134 @@ export class SubjectAreaManager {
         <p class="detail">${hobby.detail}</p>
       </div>
     `;
+  }
+
+  getMediaAnimatedTitle() {
+    return `
+      <div class="media-stage">
+        <div class="media-content">
+          <h1 class="media-band">
+            <span class="media-names">
+              <span class="media-name media-name--red">MEDIA</span>
+              <span class="media-name media-name--blue">MEDIA</span>
+            </span>
+          </h1>
+          <h1 class="media-band">
+            <span class="media-names">
+              <span class="media-name media-name--red">MEDIA</span>
+              <span class="media-name media-name--blue">MEDIA</span>
+            </span>
+          </h1>
+          <h1 class="media-band">
+            <span class="media-names">
+              <span class="media-name media-name--red">MEDIA</span>
+              <span class="media-name media-name--blue">MEDIA</span>
+            </span>
+          </h1>
+          <h1 class="media-band">
+            <span class="media-names">
+              <span class="media-name media-name--red">MEDIA</span>
+              <span class="media-name media-name--blue">MEDIA</span>
+            </span>
+          </h1>
+          <h1 class="media-band">
+            <span class="media-names">
+              <span class="media-name media-name--red">MEDIA</span>
+              <span class="media-name media-name--blue">MEDIA</span>
+            </span>
+          </h1>
+          <h1 class="media-band">
+            <span class="media-names">
+              <span class="media-name media-name--red">MEDIA</span>
+              <span class="media-name media-name--blue">MEDIA</span>
+            </span>
+          </h1>
+          <h1 class="media-band">
+            <span class="media-names">
+              <span class="media-name media-name--red media-name__end media-name__end--red">MEDIA</span>
+              <span class="media-name media-name--blue media-name__end media-name__end--blue">MEDIA</span>
+            </span>
+          </h1>
+        </div>
+      </div>
+    `;
+  }
+
+  initMediaAnimation() {
+    // Use imported SplitText for character-by-character animation
+    let mediaST = new SplitText('.media-name', {
+      type: "chars", 
+      charsClass: "mediaChar", 
+      position: "absolute"
+    });
+
+    // Initial setup
+    gsap.set('.media-stage', { autoAlpha: 1 });
+    gsap.set('.media-content', { rotate: -15 });
+
+    this.mediaIntro();
+    this.mediaLoop();
+  }
+
+  mediaIntro() {
+    let tl = gsap.timeline({
+      delay: 0.5,
+      defaults: {
+        duration: 1.5,
+        ease: 'power4'
+      }
+    });
+    
+    tl.from('.media-names', {
+      x: function(i) {
+        if (i % 2 == 0) {
+          return 800;
+        }
+        return -800;
+      },
+      stagger: 0.1
+    });
+    
+    return tl;
+  }
+
+  mediaLoop() {
+    let tl = gsap.timeline({
+      repeat: -1,
+      delay: 2
+    });
+    
+    tl.to('.media-names', {
+      y: -120,
+      duration: 4,
+      ease: 'none'
+    })
+    .from('.media-name__end--red .mediaChar', {
+      y: 140,
+      duration: 2.5,
+      ease: 'power4',
+      stagger: 0.04
+    }, 0.8)
+    .from('.media-name__end--blue .mediaChar', {
+      y: 140,
+      duration: 2.5,
+      ease: 'power4',
+      stagger: 0.04
+    }, 1.1)
+    .from('.media-band:nth-of-type(4) .media-name--blue .mediaChar', {
+      y: -140,
+      duration: 1.8,
+      ease: 'power4.inOut',
+      stagger: -0.04
+    }, 0)
+    .to('.media-band:nth-of-type(5) .media-name--blue .mediaChar', {
+      y: 140,
+      duration: 1.8,
+      ease: 'power4.inOut',
+      stagger: -0.04
+    }, 0);
+    
+    return tl;
   }
 
 
