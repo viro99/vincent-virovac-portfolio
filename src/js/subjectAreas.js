@@ -333,8 +333,7 @@ export class SubjectAreaManager {
 
     // Update content with special Media effect
     if (area === 'media') {
-      // Simplified version for debugging - just show basic text
-      sectionTitle.innerHTML = `<div style="color: white; font-size: 3rem; font-weight: 700; -webkit-text-fill-color: white; background: none;">MEDIA</div>`;
+      sectionTitle.innerHTML = this.getMediaAnimatedTitle();
     } else {
       sectionTitle.textContent = data.title;
     }
@@ -366,10 +365,9 @@ export class SubjectAreaManager {
           ease: 'power2.out', 
           delay: 0.1,
           onComplete: () => {
-            // Temporarily disabled for debugging
-            // if (area === 'media') {
-            //   setTimeout(() => this.initMediaAnimation(), 200);
-            // }
+            if (area === 'media') {
+              setTimeout(() => this.initMediaAnimation(), 200);
+            }
           }
         }
       );
@@ -381,10 +379,9 @@ export class SubjectAreaManager {
       this.pageContainer.style.opacity = '1';
       this.pageContainer.style.transform = 'translateX(0)';
       
-      // Temporarily disabled for debugging
-      // if (area === 'media') {
-      //   setTimeout(() => this.initMediaAnimation(), 300);
-      // }
+      if (area === 'media') {
+        setTimeout(() => this.initMediaAnimation(), 300);
+      }
     }
 
     this.pageContainer.classList.add('active');

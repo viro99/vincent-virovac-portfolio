@@ -507,10 +507,14 @@ a:hover {
 
 .media-name--red {
   color: #ff4444;
+  -webkit-text-fill-color: #ff4444;
+  background: none;
 }
 
 .media-name--blue {
   color: #00cec9;
+  -webkit-text-fill-color: #00cec9;
+  background: none;
   position: absolute;
   top: 8px;
 }
