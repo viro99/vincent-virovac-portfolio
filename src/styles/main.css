@@ -187,15 +187,11 @@ a:hover {
   line-height: 1;
   white-space: nowrap;
   font-family: var(--font-primary);
-  word-break: keep-all;
-  overflow-wrap: normal;
 }
 
 .char {
   text-align: center;
   backface-visibility: hidden;
-  display: inline-block;
-  white-space: pre;
 }
 
 .tagline {
@@ -905,4 +901,283 @@ a:hover {
   .area-card {
     padding: var(--spacing-md);
   }
-}/* Updated: Tue Sep 23 11:44:42 CST 2025 */
+}
+
+/* ================================
+   Hobby Posts Styles
+   ================================ */
+
+.hobby-post-item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.hobby-post-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.hobby-post-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: var(--spacing-sm);
+}
+
+.hobby-post-logo {
+  flex-shrink: 0;
+}
+
+.hobby-post-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+}
+
+.hobby-post-header-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.hobby-post-title {
+  font-size: var(--font-size-md);
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.hobby-post-date {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.hobby-post-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-active {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.status-experimental {
+  background: rgba(255, 165, 0, 0.2);
+  color: #ffa500;
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.status-research {
+  background: rgba(0, 191, 255, 0.2);
+  color: #00bfff;
+  border: 1px solid rgba(0, 191, 255, 0.3);
+}
+
+.hobby-post-hero {
+  margin: var(--spacing-md) 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+/* Special styling for GIF images (like AI video) to show full content */
+.hero-image-gif {
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.hobby-post-item:hover .hero-image {
+  transform: scale(1.02);
+}
+
+.hobby-post-content {
+  margin-bottom: var(--spacing-md);
+}
+
+.hobby-post-excerpt {
+  font-size: var(--font-size-md);
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+  font-style: italic;
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  padding-left: var(--spacing-sm);
+}
+
+.hobby-post-description {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.hobby-post-achievements,
+.hobby-post-technologies {
+  margin-bottom: var(--spacing-md);
+}
+
+.hobby-post-achievements h4,
+.hobby-post-technologies h4 {
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.1rem;
+}
+
+.hobby-post-achievements ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hobby-post-achievements li {
+  position: relative;
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-secondary);
+}
+
+.hobby-post-achievements li:before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: var(--font-size-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition-fast);
+}
+
+.tech-tag:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hobby-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hobby-post-gallery {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hobby-post-gallery h4 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-accent);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design for Hobby Posts */
+@media (max-width: 768px) {
+  .hobby-post-item {
+    padding: var(--spacing-md);
+  }
+  
+  .hobby-post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .hobby-post-title {
+    min-width: auto;
+  }
+  
+  .hero-image {
+    height: 200px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .gallery-image {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hobby-post-excerpt {
+    font-size: var(--font-size-base);
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Updated: Tue Oct 2 2025 */

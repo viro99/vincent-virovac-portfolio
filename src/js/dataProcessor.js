@@ -3,21 +3,24 @@ export class DataProcessor {
     this.personalData = null;
     this.experienceData = null;
     this.projectsData = null;
+    this.hobbyPostsData = null;
     this.blogPosts = null;
   }
 
   async loadAllData() {
     try {
       // Load JSON data files
-      const [personalRes, experienceRes, projectsRes] = await Promise.all([
+      const [personalRes, experienceRes, projectsRes, hobbyPostsRes] = await Promise.all([
         fetch('/data/personal.json'),
         fetch('/data/experience.json'),
-        fetch('/data/projects.json')
+        fetch('/data/projects.json'),
+        fetch('/data/hobby-posts.json')
       ]);
 
       this.personalData = await personalRes.json();
       this.experienceData = await experienceRes.json();
       this.projectsData = await projectsRes.json();
+      this.hobbyPostsData = await hobbyPostsRes.json();
 
       // Load blog posts (placeholder data for now)
       this.blogPosts = this.createBlogPlaceholders();
@@ -142,7 +145,8 @@ export class DataProcessor {
       description: 'Personal projects combining hardware, AI, and creative problem-solving',
       experiences,
       projects,
-      blogPosts: this.blogPosts
+      blogPosts: this.blogPosts,
+      hobbyPosts: this.hobbyPostsData?.hobbyPosts || []
     };
   }
 
@@ -172,13 +176,6 @@ export class DataProcessor {
         excerpt: 'How I use 3D printing to create thoughtful memorabilia for cryptocurrency promotional events, including custom Casascius coin displays and educational materials.',
         image: '/images/casascius-placeholder.jpg',
         tags: ['3D Printing', 'Cryptocurrency', 'Events', 'Memorabilia']
-      },
-      {
-        title: 'Teaching Kids Hardware Security with BBC Micro:bit',
-        date: 'Coming Soon',
-        excerpt: 'Foundational understanding of hardware wallets and IoT security through hands-on Python programming with young learners.',
-        image: '/images/microbit-placeholder.jpg',
-        tags: ['Education', 'Hardware Security', 'Python', 'IoT', 'BBC Micro:bit']
       },
       {
         title: 'AI Video Generation: From Concept to Marketing',

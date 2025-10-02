@@ -118,18 +118,27 @@
       "startDate": "2024-10-04",
       "endDate": "2024-12-31",
       "current": false,
-      "description": "Internship at Temporary Truth Creative, a forward-thinking marketing consultancy. Rotated through departments to gain experience in creative services, photography, marketing strategy, and talent management. Provided blockchain expertise for client pitches, assisted in client meetings, conducted interviews with prominent figures, and contributed to content creation and social media campaigns.",
+      "description": "Internship at Temporary Truth Creative, a forward-thinking marketing consultancy. Rotated through departments to gain experience in creative services, photography, marketing strategy, and talent management. Provided blockchain expertise for client pitches, assisted in client meetings, conducted interviews with prominent figures, and contributed to content creation and social media campaigns. Gained extensive hands-on experience in professional video production, interviewing techniques, and film production workflows while developing practical skills in client consultation and content strategy.",
       "achievements": [
         "Investigated leads for potential client projects",
         "Provided reports on interview subjects for speaker preparation",
         "Discovered advanced generative video tools for future projects",
-        "Improved skills in photography and film production"
+        "Improved skills in photography and film production",
+        "Conducted professional interviews with industry figures",
+        "Learned hands-on film production techniques",
+        "Supported client consultation meetings",
+        "Developed content creation workflows"
       ],
-      "skills": ["Creative Support", "Entrepreneurship", "Networking", "Marketing", "Operations Assistance", "Interviewing", "Podcasting", "Film Editing", "Generative AI Video", "ComfyUI", "Blockchain Consulting", "Client Relations", "Research", "Photography", "Content Creation", "Copywriting"],
+      "skills": ["Creative Support", "Entrepreneurship", "Networking", "Marketing", "Operations Assistance", "Interviewing", "Podcasting", "Film Editing", "Generative AI Video", "ComfyUI", "Blockchain Consulting", "Client Relations", "Research", "Photography", "Content Creation", "Copywriting", "Video Production", "Interview Techniques", "Content Strategy"],
       "type": "internship",
       "images": {
         "logo": "./images/TTClogo.jpg",
-        "showcaseimg": null
+        "showcaseimg": "/images/teamTTC.JPG",
+        "gallery": [
+          "/images/filming.JPG",
+          "/images/teamTTC.JPG",
+          "/images/interview.PNG"
+        ]
       }
     }
   ],

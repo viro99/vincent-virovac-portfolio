@@ -2,28 +2,6 @@
   "projects": [
     {
       "id": 1,
-      "title": "BBC Microbit Python Projects",
-      "description": "Designed and implemented Python coding projects specifically for BBC Microbit controllers, teaching children fundamental programming concepts through hands-on hardware interaction.",
-      "category": "tech-education",
-      "tags": ["Python", "BBC Microbit", "STEM Education", "Hardware Programming", "Youth Education"],
-      "icon": "🔬",
-      "year": "2022-2024",
-      "company": "AtomicKids",
-      "status": "completed",
-      "technologies": ["Python", "BBC Microbit", "MicroPython"],
-      "images": {
-        "logo": null,
-        "showcaseimg": null
-      },
-      "links": {
-        "demo": null,
-        "code": null,
-        "documentation": null
-      },
-      "featured": true
-    },
-    {
-      "id": 2,
       "title": "Academic Data Analysis Tools",
       "description": "Created usable backend tools and personal academic organizational web scraping tools using Python libraries for data analysis and visualization in academic research.",
       "category": "tech-education",

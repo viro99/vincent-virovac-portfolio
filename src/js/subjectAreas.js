@@ -4,6 +4,7 @@ export class SubjectAreaManager {
   constructor() {
     this.experienceData = null;
     this.projectsData = null;
+    this.hobbyPostsData = null;
     this.areas = null;
     this.pageContainer = document.querySelector('#section-page');
     this.landingContainer = document.querySelector('.landing-container');
@@ -21,13 +22,15 @@ export class SubjectAreaManager {
   async loadData() {
     try {
       // Load JSON data using fetch with correct base path
-      const [experienceRes, projectsRes] = await Promise.all([
+      const [experienceRes, projectsRes, hobbyPostsRes] = await Promise.all([
         fetch('/vincent-virovac-portfolio/data/experience.json'),
-        fetch('/vincent-virovac-portfolio/data/projects.json')
+        fetch('/vincent-virovac-portfolio/data/projects.json'),
+        fetch('/vincent-virovac-portfolio/data/hobby-posts.json')
       ]);
 
       this.experienceData = await experienceRes.json();
       this.projectsData = await projectsRes.json();
+      this.hobbyPostsData = await hobbyPostsRes.json();
       
       // Update card content with real data
       this.cardData.fintech.content = this.prepareContentData('fintech');
@@ -92,6 +95,25 @@ export class SubjectAreaManager {
     }
 
     const content = [];
+
+    // Add hobby posts first (only for hobbies category) - most visual and engaging content
+    if (category === 'hobbies' && this.hobbyPostsData?.hobbyPosts) {
+      this.hobbyPostsData.hobbyPosts.forEach(post => {
+        content.push({
+          type: 'hobbyPost',
+          title: post.title,
+          date: post.date,
+          excerpt: post.excerpt,
+          description: post.description,
+          achievements: post.achievements || [],
+          technologies: post.technologies || [],
+          tags: post.tags || [],
+          images: post.images || null,
+          status: post.status,
+          links: post.links || null
+        });
+      });
+    }
 
     // Add relevant work experience
     if (this.experienceData.workExperience) {
@@ -414,6 +436,8 @@ export class SubjectAreaManager {
         return this.renderProject(item);
       } else if (item.type === 'hobby') {
         return this.renderHobby(item);
+      } else if (item.type === 'hobbyPost') {
+        return this.renderHobbyPost(item);
       }
     }).join('');
   }
@@ -479,6 +503,72 @@ export class SubjectAreaManager {
         <h3>${hobby.title}</h3>
         <p class="description">${hobby.description}</p>
         <p class="detail">${hobby.detail}</p>
+      </div>
+    `;
+  }
+
+  renderHobbyPost(post) {
+    const hasGallery = post.images?.gallery && post.images.gallery.length > 1;
+    const heroImage = post.images?.hero;
+    
+    return `
+      <div class="content-item hobby-post-item">
+        <div class="hobby-post-header">
+          ${post.images?.logo ? `<div class="hobby-post-logo">
+            <img src="${post.images.logo}" alt="${post.title} logo" />
+          </div>` : ''}
+          <div class="hobby-post-header-text">
+            <h3 class="hobby-post-title">${post.title}</h3>
+            <span class="hobby-post-date">${post.date}</span>
+            <span class="hobby-post-status status-${post.status}">${post.status}</span>
+          </div>
+        </div>
+        
+        ${heroImage ? `
+          <div class="hobby-post-hero">
+            <img src="${heroImage}" alt="${post.title}" class="hero-image${heroImage.toLowerCase().endsWith('.gif') ? ' hero-image-gif' : ''}" />
+          </div>
+        ` : ''}
+        
+        <div class="hobby-post-content">
+          <p class="hobby-post-excerpt">${post.excerpt}</p>
+          <p class="hobby-post-description">${post.description}</p>
+          
+          ${post.achievements && post.achievements.length > 0 ? `
+            <div class="hobby-post-achievements">
+              <h4>Key Achievements:</h4>
+              <ul>
+                ${post.achievements.map(achievement => `<li>${achievement}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+          
+          ${post.technologies && post.technologies.length > 0 ? `
+            <div class="hobby-post-technologies">
+              <h4>Technologies Used:</h4>
+              <div class="tech-tags">
+                ${post.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+              </div>
+            </div>
+          ` : ''}
+          
+          ${post.tags && post.tags.length > 0 ? `
+            <div class="hobby-post-tags">
+              ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            </div>
+          ` : ''}
+        </div>
+        
+        ${hasGallery ? `
+          <div class="hobby-post-gallery">
+            <h4>Gallery</h4>
+            <div class="gallery-grid">
+              ${post.images.gallery.map((image, index) => `
+                <img src="${image}" alt="${post.title} - Image ${index + 1}" class="gallery-image" />
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
       </div>
     `;
   }

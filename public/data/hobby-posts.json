@@ -1,0 +1,113 @@
+{
+  "hobbyPosts": [
+    {
+      "id": 1,
+      "title": "Cryptocurrency Meetup Promotion",
+      "date": "2024",
+      "status": "active",
+      "excerpt": "I enjoy creating new forms of outreach and education, such as sharing 3D printed Casascius coins for teaching self custody and proper seed management.",
+      "description": "I enjoy creating new forms of outreach and education, such as sharing 3D printed Casascius coins for teaching self custody and proper seed management. This hands-on approach makes complex security concepts tangible and memorable for newcomers to cryptocurrency.",
+      "images": {
+        "hero": "/images/casascius.JPG",
+        "gallery": [
+          "/images/coinprint.JPG",
+          "/images/printing.JPG",
+          "/images/casascius.JPG"
+        ]
+      },
+      "tags": ["3D Printing", "Cryptocurrency", "Education", "Self Custody", "Bitcoin", "Meetups"],
+      "technologies": ["3D Modeling", "PLA Printing", "Educational Design", "Community Outreach"],
+      "achievements": [
+        "Created educational 3D printed Casascius coin demonstrations",
+        "Taught self custody concepts through tactile learning",
+        "Developed innovative outreach methods for crypto education",
+        "Facilitated hands-on seed management workshops"
+      ],
+      "links": {
+        "demo": null,
+        "gallery": null,
+        "blog": null
+      }
+    },
+    {
+      "id": 2,
+      "title": "BBC Micro:bit Python Projects & Hardware Security Education",
+      "date": "2022-2024",
+      "status": "active", 
+      "excerpt": "Designed and implemented Python coding projects for BBC Micro:bit controllers, teaching children fundamental programming concepts and hardware security through hands-on interaction.",
+      "description": "Comprehensive educational program combining Python programming instruction with hardware security concepts using BBC Micro:bit controllers. This project teaches children fundamental programming skills while introducing them to IoT security, hardware wallets, and safe computing practices through interactive, hands-on learning experiences.",
+      "images": {
+        "logo": "/images/BBCmicrologo.png"
+      },
+      "tags": ["Python", "BBC Micro:bit", "STEM Education", "Youth Education", "IoT", "Hardware Programming"],
+      "technologies": ["Python", "MicroPython", "BBC Micro:bit", "Educational Design", "Hardware Programming", "Curriculum Development"],
+      "achievements": [
+        "Designed and implemented Python coding projects for BBC Micro:bit controllers",
+        "Taught 100+ students fundamental programming concepts through microcontroller IoT projects",
+        "Created interactive IoT security demonstration projects",
+        "Established hands-on learning methodology for young programmers"
+      ],
+      "links": {
+        "demo": null,
+        "code": null,
+        "curriculum": null
+      }
+    },
+    {
+      "id": 3,
+      "title": "AI Video Generation: From Concept to Marketing",
+      "date": "2024",
+      "status": "current",
+      "excerpt": "Experimenting with generative AI video tools for marketing applications. See my short AI-generated video example in action.",
+      "description": "I use ComfyUI on advanced hardware to learn advanced AI generation tools",
+      "images": {
+        "hero": "/images/mangowhat.gif",
+        "gallery": [
+          "/images/mangowhat.gif"
+        ]
+      },
+      "tags": ["AI", "Video Generation", "Marketing", "Creative Tech", "ComfyUI", "Generative AI"],
+      "technologies": ["ComfyUI", "AI Video Tools", "Video Editing", "Creative AI"],
+      "achievements": [
+        "Generated sample marketing video content using AI",
+        "Explored ComfyUI for advanced video generation",
+        "Analyzed practical applications for client work",
+        "Created workflow for rapid video prototyping"
+      ],
+      "links": {
+        "demo": "/images/mangowhat.gif",
+        "video": null,
+        "tutorial": null
+      }
+    },
+    {
+      "id": 5,
+      "title": "Behind the Scenes: Film Production & Interviews",
+      "date": "2024",
+      "status": "past",
+      "excerpt": "Documentation of my hands-on experience in film production, interviewing, and content creation during my internship at Temporary Truth Creative.",
+      "description": "Real-world experience in professional video production and interviewing during my internship. This collection showcases the practical skills I developed in client meetings, interview preparation, and film production workflows.",
+      "images": {
+        "hero": "/images/teamTTC.JPG",
+        "gallery": [
+          "/images/filming.JPG",
+          "/images/teamTTC.JPG",
+          "/images/interview.PNG"
+        ]
+      },
+      "tags": ["Video Production", "Interviewing", "Content Creation", "Professional Development", "Media"],
+      "technologies": ["Video Production", "Interview Techniques", "Client Relations", "Content Strategy"],
+      "achievements": [
+        "Conducted professional interviews with industry figures",
+        "Learned hands-on film production techniques",
+        "Supported client consultation meetings",
+        "Developed content creation workflows"
+      ],
+      "links": {
+        "portfolio": null,
+        "interviews": null,
+        "behind_scenes": null
+      }
+    }
+  ]
+}
