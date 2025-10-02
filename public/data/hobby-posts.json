@@ -8,11 +8,11 @@
       "excerpt": "I enjoy creating new forms of outreach and education, such as sharing 3D printed Casascius coins for teaching self custody and proper seed management.",
       "description": "I enjoy creating new forms of outreach and education, such as sharing 3D printed Casascius coins for teaching self custody and proper seed management. This hands-on approach makes complex security concepts tangible and memorable for newcomers to cryptocurrency.",
       "images": {
-        "hero": "/images/casascius.JPG",
+        "hero": "./images/casascius.JPG",
         "gallery": [
-          "/images/coinprint.JPG",
-          "/images/printing.JPG",
-          "/images/casascius.JPG"
+          "./images/coinprint.JPG",
+          "./images/printing.JPG",
+          "./images/casascius.JPG"
         ]
       },
       "tags": ["3D Printing", "Cryptocurrency", "Education", "Self Custody", "Bitcoin", "Meetups"],
@@ -37,7 +37,7 @@
       "excerpt": "Designed and implemented Python coding projects for BBC Micro:bit controllers, teaching children fundamental programming concepts and hardware security through hands-on interaction.",
       "description": "Comprehensive educational program combining Python programming instruction with hardware security concepts using BBC Micro:bit controllers. This project teaches children fundamental programming skills while introducing them to IoT security, hardware wallets, and safe computing practices through interactive, hands-on learning experiences.",
       "images": {
-        "logo": "/images/BBCmicrologo.png"
+        "logo": "./images/BBCmicrologo.png"
       },
       "tags": ["Python", "BBC Micro:bit", "STEM Education", "Youth Education", "IoT", "Hardware Programming"],
       "technologies": ["Python", "MicroPython", "BBC Micro:bit", "Educational Design", "Hardware Programming", "Curriculum Development"],
@@ -61,9 +61,9 @@
       "excerpt": "Experimenting with generative AI video tools for marketing applications. See my short AI-generated video example in action.",
       "description": "I use ComfyUI on advanced hardware to learn advanced AI generation tools",
       "images": {
-        "hero": "/images/mangowhat.gif",
+        "hero": "./images/mangowhat.gif",
         "gallery": [
-          "/images/mangowhat.gif"
+          "./images/mangowhat.gif"
         ]
       },
       "tags": ["AI", "Video Generation", "Marketing", "Creative Tech", "ComfyUI", "Generative AI"],
@@ -75,7 +75,7 @@
         "Created workflow for rapid video prototyping"
       ],
       "links": {
-        "demo": "/images/mangowhat.gif",
+        "demo": "./images/mangowhat.gif",
         "video": null,
         "tutorial": null
       }
@@ -88,11 +88,11 @@
       "excerpt": "Documentation of my hands-on experience in film production, interviewing, and content creation during my internship at Temporary Truth Creative.",
       "description": "Real-world experience in professional video production and interviewing during my internship. This collection showcases the practical skills I developed in client meetings, interview preparation, and film production workflows.",
       "images": {
-        "hero": "/images/teamTTC.JPG",
+        "hero": "./images/teamTTC.JPG",
         "gallery": [
-          "/images/filming.JPG",
-          "/images/teamTTC.JPG",
-          "/images/interview.PNG"
+          "./images/filming.JPG",
+          "./images/teamTTC.JPG",
+          "./images/interview.PNG"
         ]
       },
       "tags": ["Video Production", "Interviewing", "Content Creation", "Professional Development", "Media"],
