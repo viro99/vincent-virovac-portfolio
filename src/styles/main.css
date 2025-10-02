@@ -171,6 +171,7 @@ a:hover {
   min-width: 800px; 
   height: 100%;
   transform-style: preserve-3d;
+  transform-origin: 50% 50% 0; /* Consistent transform origin */
 }
 
 .txt {
@@ -180,18 +181,21 @@ a:hover {
   transform: translate(-50%, -50%);
   margin: 0;
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 700; /* Fixed font weight to prevent expansion */
   text-transform: none;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   line-height: 1;
   white-space: nowrap;
   font-family: var(--font-primary);
+  transform-origin: 50% 50% 0; /* Consistent transform origin */
 }
 
 .char {
   text-align: center;
   backface-visibility: hidden;
+  transform-origin: 50% 50% 0; /* Consistent transform origin */
+  font-weight: inherit; /* Inherit weight to prevent variations */
 }
 
 .tagline {

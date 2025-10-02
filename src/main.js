@@ -13,7 +13,8 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 class App {
   constructor() {
     this.analytics = new AnalyticsManager();
-    this.nameWheel = new NameWheelAnimation();
+    // Using smooth-spin animation mode for the name wheel
+    this.nameWheel = new NameWheelAnimation('smooth-spin');
     this.subjectAreas = new SubjectAreaManager();
     this.contactForm = new ContactForm();
     
