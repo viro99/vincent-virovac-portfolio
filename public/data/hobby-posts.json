@@ -31,11 +31,11 @@
     },
     {
       "id": 2,
-      "title": "BBC Micro:bit Python Projects & Hardware Security Education",
+      "title": "BBC Micro:bit Python Projects",
       "date": "2022-2024",
       "status": "active", 
-      "excerpt": "Designed and implemented Python coding projects for BBC Micro:bit controllers, teaching children fundamental programming concepts and hardware security through hands-on interaction.",
-      "description": "Comprehensive educational program combining Python programming instruction with hardware security concepts using BBC Micro:bit controllers. This project teaches children fundamental programming skills while introducing them to IoT security, hardware wallets, and safe computing practices through interactive, hands-on learning experiences.",
+      "excerpt": "Designed and implemented Python coding projects for BBC Micro:bit controllers, teaching children fundamental programming concepts.",
+      "description": "Comprehensive educational programs combining Python programming instruction with IoT concepts using BBC Micro:bit controllers. These projects teach children fundamental programming skills while introducing them to IoT and computing practices through interactive, hands-on learning experiences.",
       "images": {
         "logo": "./images/BBCmicrologo.png"
       },
@@ -44,7 +44,7 @@
       "achievements": [
         "Designed and implemented Python coding projects for BBC Micro:bit controllers",
         "Taught 100+ students fundamental programming concepts through microcontroller IoT projects",
-        "Created interactive IoT security demonstration projects",
+        "Created interactive IoT and game design projects",
         "Established hands-on learning methodology for young programmers"
       ],
       "links": {
