@@ -2,6 +2,28 @@
   "workExperience": [
     {
       "id": 1,
+      "company": "Taipei American School",
+      "location": "Taipei, Taiwan",
+      "position": "Coding Club Instructor",
+      "startDate": "2024",
+      "endDate": "Present",
+      "current": true,
+      "description": "Leading coding instruction and curriculum development for students at Taipei American School, focusing on practical programming skills and computer science fundamentals.",
+      "achievements": [
+        "Developing comprehensive coding curriculum for diverse skill levels",
+        "Teaching Python, web development, and machine learning concepts",
+        "Mentoring students in personal coding projects and competitions",
+        "Integrating real-world applications into educational programming"
+      ],
+      "skills": ["Python", "Web Development", "Machine Learning", "Curriculum Development", "Student Mentoring", "Educational Technology"],
+      "type": "employment",
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      }
+    },
+    {
+      "id": 2,
       "company": "AtomicKids",
       "location": "Taipei, Taiwan",
       "position": "Teacher - STEM and CS Clubs",
@@ -22,7 +44,29 @@
       }
     },
     {
-      "id": 2,
+      "id": 3,
+      "company": "Property Management Start-up (GARMIN Engineer Collaboration)",
+      "location": "Taiwan",
+      "position": "Data Engineer & Data Scientist",
+      "startDate": "2024",
+      "endDate": "Present",
+      "current": true,
+      "description": "Collaborating with a GARMIN engineer on data engineering and data science solutions for a property management start-up, focusing on big data analysis and system optimization.",
+      "achievements": [
+        "Implementing data pipelines for property management analytics",
+        "Developing machine learning models for property valuation and market analysis",
+        "Creating data visualization dashboards for business intelligence",
+        "Optimizing database performance and data processing workflows"
+      ],
+      "skills": ["Data Engineering", "Data Science", "Big Data Analysis", "Machine Learning", "Python", "Database Optimization", "Business Intelligence", "Property Management Systems"],
+      "type": "collaboration",
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      }
+    },
+    {
+      "id": 4,
       "company": "Freelance",
       "location": "USA & Taiwan",
       "position": "Cryptocurrency Consulting",
@@ -45,7 +89,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 5,
       "company": "NEM Blockchain Foundation",
       "location": "USA & Taiwan",
       "position": "Volunteer Support",
@@ -67,7 +111,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 6,
       "company": "Temporary Truth Creative",
       "location": "Taipei City, Taiwan",
       "position": "Subject Matter Expert Intern",
@@ -102,9 +146,11 @@
       "gpa": null,
       "achievements": [
         "Created usable backend tools and personal academic organizational webscraping tools with Python libraries such as pandas, matplotlib, Numpy, Jupyter for data analysis and visualization",
-        "Covered topics including data wrangling, statistical analysis, and big data methodologies"
+        "Covered topics including data wrangling, statistical analysis, and big data methodologies",
+        "Completed comprehensive coursework in big data analysis and data engineering techniques",
+        "Developed machine learning models using PyTorch for academic research projects"
       ],
-      "skills": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Data Analysis", "Statistical Analysis", "Web Scraping", "Big Data"],
+      "skills": ["Python", "Pandas", "Matplotlib", "Numpy", "Jupyter", "Data Analysis", "Statistical Analysis", "Web Scraping", "Big Data", "PyTorch", "Machine Learning", "Data Engineering"],
       "images": {
         "logo": "./images/MingChuanUniversitylogo.jpg",
         "showcaseimg": null
@@ -128,6 +174,24 @@
       "endDate": "2024",
       "type": "online-courses",
       "description": "Comprehensive self-directed learning in computer science and web development"
+    },
+    {
+      "id": 3,
+      "institution": "Various Online Platforms",
+      "program": "Machine Learning and PyTorch Specializations",
+      "startDate": "2023",
+      "endDate": "2024",
+      "type": "online-courses",
+      "description": "Completed multiple Python courses focusing on machine learning, PyTorch framework, and advanced data science techniques"
+    },
+    {
+      "id": 4,
+      "institution": "Self-Directed Learning",
+      "program": "LLM and OCR Technologies",
+      "startDate": "2023",
+      "endDate": "2024",
+      "type": "self-study",
+      "description": "Extensive research and hands-on experience with Large Language Models and OCR projects including marker implementation"
     }
   ],
   "languages": [

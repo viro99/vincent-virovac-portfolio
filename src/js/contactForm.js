@@ -2,6 +2,13 @@ export class ContactForm {
   constructor() {
     this.form = document.getElementById('contact-form');
     this.submitButton = null;
+    
+    // EmailJS configuration
+    this.emailjsConfig = {
+      serviceId: 'service_flj9b48',
+      templateId: 'template_yh6qnjv',
+      publicKey: 'rkcLzU5bvkbHRgu2j'
+    };
   }
 
   init() {
@@ -9,6 +16,18 @@ export class ContactForm {
 
     this.submitButton = this.form.querySelector('button[type="submit"]');
     this.setupEventListeners();
+    
+    // Initialize EmailJS
+    this.initializeEmailJS();
+  }
+
+  initializeEmailJS() {
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init(this.emailjsConfig.publicKey);
+      console.log('EmailJS initialized successfully');
+    } else {
+      console.error('EmailJS library not loaded');
+    }
   }
 
   setupEventListeners() {
@@ -44,12 +63,12 @@ export class ContactForm {
     this.setSubmitState(true);
 
     try {
-      // For now, simulate form submission
-      await this.simulateSubmission(data);
+      // Send email using EmailJS
+      await this.sendEmailWithEmailJS(data);
       this.showSuccess();
     } catch (error) {
       console.error('Form submission error:', error);
-      this.showError();
+      this.showError(error);
       
       if (window.app && window.app.analytics) {
         window.app.analytics.trackFormSubmission('contact', false);
@@ -59,14 +78,33 @@ export class ContactForm {
     }
   }
 
-  async simulateSubmission(data) {
-    // Simulate API call delay
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        console.log('Form submitted:', data);
-        resolve();
-      }, 1500);
-    });
+  async sendEmailWithEmailJS(data) {
+    if (typeof emailjs === 'undefined') {
+      throw new Error('EmailJS not loaded');
+    }
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: data.name,
+      from_email: data.email,
+      message: data.message,
+      to_email: 'vincentwvirovac@gmail.com',
+      reply_to: data.email
+    };
+
+    try {
+      const response = await emailjs.send(
+        this.emailjsConfig.serviceId,
+        this.emailjsConfig.templateId,
+        templateParams
+      );
+      
+      console.log('Email sent successfully:', response);
+      return response;
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      throw error;
+    }
   }
 
   setSubmitState(isSubmitting) {
@@ -88,8 +126,17 @@ export class ContactForm {
     this.form.reset();
   }
 
-  showError() {
-    this.showMessage('Sorry, there was an error sending your message. Please try emailing me directly.', 'error');
+  showError(error = null) {
+    let errorMessage = 'Sorry, there was an error sending your message. Please try emailing me directly at vincentwvirovac@gmail.com';
+    
+    // Provide more specific error messages
+    if (error && error.text) {
+      if (error.text.includes('EmailJS')) {
+        errorMessage = 'Email service temporarily unavailable. Please email me directly at vincentwvirovac@gmail.com';
+      }
+    }
+    
+    this.showMessage(errorMessage, 'error');
   }
 
   showMessage(text, type) {

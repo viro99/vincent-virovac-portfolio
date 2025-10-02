@@ -6,9 +6,9 @@
     "location": "Taipei, Taiwan",
     "title": "Multi-disciplinary Professional",
     "subtitle": "",
-    "tagline": "Business Consulting & Creative Services",
+    "tagline": "Data Science & Educational Technology",
     "languages": "",
-    "bio": "I am a recent graduate in International Business and Trade BA with diverse experience in STEM education, business consulting, and creative services. My background spans across educational technology, client consulting, content creation, and international business, allowing me to bring a unique perspective to every project.",
+    "bio": "I am a recent graduate in International Business and Trade BA with diverse experience in STEM education, data science, and technology consulting. My background spans across educational technology, machine learning, data engineering, and international business, allowing me to bring a unique perspective to every project.",
     "availability": "Open to new opportunities",
     "website": null,
     "github": null,
@@ -19,11 +19,22 @@
       "profileAlt": "./images/profile.png"
     }
   },
+  "aboutMe": {
+    "background": "Originally from Los Angeles, California, I've built my career bridging the gap between technology and education while based in Taipei, Taiwan.",
+    "currentRole": "I am currently a coding club instructor at the Taipei American School, where I combine my passion for education with my technical expertise to inspire the next generation of developers and data scientists.",
+    "technicalExpertise": {
+      "llmExperience": "I have extensive experience and understanding in Large Language Models (LLMs), staying current with the latest developments in AI and natural language processing technologies.",
+      "machineLearning": "Through completing many Python courses and personal side projects, I've developed proficiency in machine learning using PyTorch and have worked on various OCR projects including marker implementation.",
+      "dataScience": "I have extensive experience in data science and data engineering, including collaboration with a GARMIN engineer on property management start-up solutions, focusing on big data analysis and system optimization."
+    },
+    "education": "My recent university courses have provided me with a solid foundation in big data analysis, complemented by numerous Python, web development, and machine learning courses that keep my skills current and relevant.",
+    "approach": "I believe in combining theoretical knowledge with practical application, whether I'm teaching students, consulting on cryptocurrency investments, or developing data-driven solutions for businesses."
+  },
   "statistics": {
     "yearsProfessional": 8,
     "languages": 3,
-    "projects": 15,
-    "studentsTaught": 50
+    "projects": 20,
+    "studentsTaught": 75
   },
   "highlights": [
     {
@@ -36,11 +47,19 @@
     },
     {
       "icon": "👨‍🏫",
-      "text": "STEM & CS Education Specialist"
+      "text": "Coding Instructor at Taipei American School"
+    },
+    {
+      "icon": "🤖",
+      "text": "LLM & Machine Learning Specialist"
+    },
+    {
+      "icon": "📊",
+      "text": "Data Science & Engineering Expert"
     },
     {
       "icon": "🌍",
-      "text": "Multilingual Professional (EN/FR/ZH)"
+      "text": "Los Angeles Native in Taipei"
     }
   ]
 }

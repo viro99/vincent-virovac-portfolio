@@ -131,6 +131,94 @@
         "documentation": null
       },
       "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Machine Learning Projects with PyTorch",
+      "description": "Developed multiple personal machine learning projects using PyTorch framework, focusing on practical applications and deep learning fundamentals through hands-on experimentation.",
+      "category": "tech-education",
+      "tags": ["Machine Learning", "PyTorch", "Deep Learning", "Python", "Neural Networks", "Data Science"],
+      "icon": "🧠",
+      "year": "2023-2024",
+      "company": "Personal Projects",
+      "status": "ongoing",
+      "technologies": ["PyTorch", "Python", "Jupyter Notebooks", "NumPy", "Pandas", "Scikit-learn"],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": true
+    },
+    {
+      "id": 8,
+      "title": "OCR Implementation with Marker",
+      "description": "Implemented and experimented with OCR (Optical Character Recognition) technologies including the marker project, exploring document processing and text extraction capabilities.",
+      "category": "tech-education",
+      "tags": ["OCR", "Document Processing", "Text Extraction", "Python", "Computer Vision", "Machine Learning"],
+      "icon": "📄",
+      "year": "2024",
+      "company": "Personal Research",
+      "status": "completed",
+      "technologies": ["Marker", "Python", "OpenCV", "Tesseract", "PIL/Pillow", "PDF Processing"],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": true
+    },
+    {
+      "id": 9,
+      "title": "Property Management Data Pipeline",
+      "description": "Collaborated with a GARMIN engineer to develop comprehensive data engineering solutions for a property management start-up, including data pipelines, analytics, and machine learning models.",
+      "category": "tech-education",
+      "tags": ["Data Engineering", "Big Data", "Machine Learning", "Property Management", "Analytics", "Database Optimization"],
+      "icon": "🏢",
+      "year": "2024-Present",
+      "company": "Property Management Start-up",
+      "status": "ongoing",
+      "technologies": ["Python", "SQL", "Data Pipelines", "Machine Learning", "Business Intelligence", "Database Systems"],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": true
+    },
+    {
+      "id": 10,
+      "title": "LLM Research and Implementation",
+      "description": "Extensive research and hands-on experience with Large Language Models, exploring various applications, fine-tuning techniques, and integration patterns for educational and business use cases.",
+      "category": "tech-education",
+      "tags": ["LLM", "Large Language Models", "Natural Language Processing", "AI Research", "Python", "Transformers"],
+      "icon": "🤖",
+      "year": "2023-Present",
+      "company": "Self-Directed Research",
+      "status": "ongoing",
+      "technologies": ["Transformers", "Hugging Face", "Python", "TensorFlow", "PyTorch", "OpenAI API"],
+      "images": {
+        "logo": null,
+        "showcaseimg": null
+      },
+      "links": {
+        "demo": null,
+        "code": null,
+        "documentation": null
+      },
+      "featured": true
     }
   ],
   "projectCategories": [
@@ -152,7 +240,12 @@
     {
       "id": "tech-education",
       "name": "Technical Projects",
-      "description": "STEM education background, coding projects, and technical development"
+      "description": "Machine learning, data science, STEM education, and software development"
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science & ML",
+      "description": "Machine learning, data engineering, and AI research projects"
     }
   ]
 }
