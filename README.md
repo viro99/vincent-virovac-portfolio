@@ -81,7 +81,88 @@ npm run build
 4. **Company Logos:**
    - Copy existing `MingChuanUniversitylogo.jpg` and `TTClogo.jpg`
 
-## 📄 Resume Setup
+## �️ Adding New Images (IMPORTANT!)
+
+### For GitHub Pages Compatibility
+
+**⚠️ CRITICAL:** Images must be added to **BOTH** locations for proper deployment:
+
+1. **Add to `images/` folder (root)**
+   ```bash
+   cp your-new-image.jpg images/
+   ```
+
+2. **Add to `public/images/` folder** 
+   ```bash
+   cp your-new-image.jpg public/images/
+   ```
+
+### Why Both Locations?
+
+- **Local Development:** Uses `public/images/` via Vite dev server
+- **GitHub Pages:** Serves from root `images/` folder after build
+- **Missing either location** → Broken images on production
+
+### JSON Data Path Format
+
+Use **relative paths** in your JSON files:
+```json
+{
+  "images": {
+    "logo": "./images/company-logo.jpg",
+    "hero": "./images/hero-image.jpg", 
+    "gallery": [
+      "./images/gallery1.jpg",
+      "./images/gallery2.jpg"
+    ]
+  }
+}
+```
+
+### Step-by-Step Example
+
+Adding a new hobby post image:
+
+1. **Add image files:**
+   ```bash
+   # Copy to both locations
+   cp ~/Downloads/my-project.jpg images/
+   cp ~/Downloads/my-project.jpg public/images/
+   ```
+
+2. **Update JSON data:**
+   ```json
+   {
+     "title": "My New Project",
+     "images": {
+       "hero": "./images/my-project.jpg"
+     }
+   }
+   ```
+
+3. **Copy updated data:**
+   ```bash
+   cp data/hobby-posts.json public/data/hobby-posts.json
+   ```
+
+4. **Commit and deploy:**
+   ```bash
+   git add .
+   git commit -m "Add new project images"
+   git push origin main
+   ```
+
+### Supported Formats
+- **Photos:** `.jpg`, `.jpeg`, `.png`
+- **Animations:** `.gif`
+- **Recommended:** Use `.jpg` for photos, `.png` for logos with transparency
+
+### Image Optimization Tips
+- **Compress images** before adding (use tools like TinyPNG)
+- **Consistent sizing:** 1200px width for hero images, 400px for logos
+- **File naming:** Use lowercase, hyphens instead of spaces
+
+## �📄 Resume Setup
 
 **⚠️ IMPORTANT:** Place your resume PDF as `/public/resume.pdf`
 
