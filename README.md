@@ -205,6 +205,11 @@ The site tracks:
 - **Form submissions**
 - **Scroll depth**
 
+**📋 Analytics Documentation:**
+- **[GA4 Dashboard Analysis](./GA4-DASHBOARD-ANALYSIS.md)** - Complete analysis of expected GA4 outputs
+- **[GA4 Quick Setup Guide](./GA4-QUICK-SETUP-GUIDE.md)** - Step-by-step GA4 configuration
+- **[Analytics Testing Guide](./ANALYTICS-TESTING.md)** - Browser console testing commands
+
 Access your data at: [Google Analytics Dashboard](https://analytics.google.com/)
 
 ## 🎨 Customization
